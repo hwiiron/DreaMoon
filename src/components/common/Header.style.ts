@@ -13,18 +13,14 @@ const StyledHeader = styled.header`
 const StyledLogo = styled.h1`
   a {
     border-radius: 6px;
+    width: 106px;
+    height: 35px;
+    background-image: url("/images/img_Logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     display: block;
-    font-family: var(--logo-font);
-    font-size: 30px;
-    font-weight: 400;
     padding: 4px 8px 1px;
     transition: 0.3s;
-  }
-
-  @media (max-width: 640px) {
-    &:hover {
-      background: none;
-    }
   }
 `;
 

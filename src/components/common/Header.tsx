@@ -12,7 +12,7 @@ function Header({ toggleTheme, isDarkMode }: HeaderProps) {
     <StyledInner>
       <StyledHeader>
         <StyledLogo>
-          <Link href={"/"}>DreaMoon</Link>
+          <Link href={"/"} />
         </StyledLogo>
 
         <StyledModeButton onClick={toggleTheme}>
