@@ -12,4 +12,7 @@
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   --logo-font: "Teko", sans-serif;
+
+  --login-button: #38b2ac;
+  --login-button-hover: rgba(56, 178, 172, 0.8);
 }

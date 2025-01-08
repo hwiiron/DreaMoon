@@ -14,6 +14,6 @@ export const GlobalStyle = createGlobalStyle`
 
   a:hover,
   button:hover {
-    background: ${({ theme }) => theme.hoverBackground};
+    background: ${({ theme }) => theme["background-hover"]};
   }
 `;
