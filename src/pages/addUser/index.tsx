@@ -27,7 +27,7 @@ function AddUser() {
 
   return (
     <>
-      <Link href={"/"}>유저 목록</Link>
+      <Link href={"/userList"}>유저 목록</Link>
 
       <div>
         <h2>유저 추가</h2>
