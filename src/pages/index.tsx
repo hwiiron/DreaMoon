@@ -1,9 +1,9 @@
 import { StyledInner } from "@/components/common/Inner.style";
-import { StyledVisual } from "./index.style";
 import {
   StyledButtonWrap,
   StyledButton,
 } from "../components/common/Button.style";
+import Visual from "@/components/common/Visual";
 
 function Home() {
   const handleLoginClick = () => {
@@ -12,7 +12,7 @@ function Home() {
 
   return (
     <StyledInner>
-      <StyledVisual />
+      <Visual />
 
       <StyledButtonWrap>
         <StyledButton onClick={handleLoginClick}>로그인</StyledButton>
