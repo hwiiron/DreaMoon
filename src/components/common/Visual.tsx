@@ -7,6 +7,7 @@ function Visual() {
         src="https://hwiiron.com/DreaMoon.mp4"
         muted
         autoPlay={true}
+        loop
       ></video>
     </StyledVisual>
   );
