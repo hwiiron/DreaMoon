@@ -4,7 +4,7 @@ function Visual() {
   return (
     <StyledVisual>
       <video
-        src="../../public/video/video_visual.mp4"
+        src="https://hwiiron.com/DreaMoon.mp4"
         muted
         autoPlay={true}
       ></video>
