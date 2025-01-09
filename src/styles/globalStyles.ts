@@ -7,12 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     transition: 0.3s;
   }
 
-  a,
   button {
     color: ${({ theme }) => theme.color};
   }
 
-  a:hover,
   button:hover {
     background: ${({ theme }) => theme["background-hover"]};
   }

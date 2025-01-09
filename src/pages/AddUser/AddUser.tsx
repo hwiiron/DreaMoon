@@ -1,15 +1,14 @@
-import Link from "next/link";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import db from "@/firebase/firestore";
+import db from "../../firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
-import { useRouter } from "next/router";
 
 function AddUser() {
   const [newId, setNewId] = useState("");
   const [newNickname, setNewNickname] = useState("");
   const [newAge, setNewAge] = useState<number | string>("");
 
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const handleAddUser = async () => {
     const userDoc = doc(db, "users", newId);
@@ -22,12 +21,12 @@ function AddUser() {
     setNewNickname("");
     setNewAge("");
 
-    router.push("/");
+    navigate("/");
   };
 
   return (
     <>
-      <Link href={"/userList"}>유저 목록</Link>
+      <Link to="/userList">유저 목록</Link>
 
       <div>
         <h2>유저 추가</h2>

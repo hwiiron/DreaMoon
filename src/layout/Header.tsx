@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { StyledHeader, StyledLogo, StyledModeButton } from "./Header.style";
 import { StyledInner } from "./Inner.style";
 
@@ -11,9 +11,9 @@ function Header({ toggleTheme, isDarkMode }: HeaderProps) {
   return (
     <StyledInner>
       <StyledHeader>
-        <StyledLogo>
-          <Link href={"/"} />
-        </StyledLogo>
+        <Link to="/">
+          <StyledLogo isDarkMode={isDarkMode} />
+        </Link>
 
         <StyledModeButton onClick={toggleTheme}>
           {isDarkMode ? "☾" : "☀︎"}
