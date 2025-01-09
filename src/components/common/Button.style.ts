@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-const StyledButtonWrap = styled.div`
-  text-align: center;
-  margin-top: 60px;
-`;
-
 const StyledButton = styled.button`
   background: var(--login-button);
   border-radius: 6px;
@@ -17,4 +12,4 @@ const StyledButton = styled.button`
   }
 `;
 
-export { StyledButtonWrap, StyledButton };
+export { StyledButton };
