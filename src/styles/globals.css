@@ -12,4 +12,13 @@
 
   --login-button: #38b2ac;
   --login-button-hover: rgba(56, 178, 172, 0.8);
+
+  --white: #ffffff;
+  --black: #1a202c;
+
+  --input-border: #d9d9d9;
+  --input-focus: #38b2ac;
+  --placeholder-color: #9fa6b2;
+
+  --login-button: #9fa6b2;
 }

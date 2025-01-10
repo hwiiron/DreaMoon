@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledHeader = styled.header`
   width: 100%;
-  height: 90px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +25,7 @@ const StyledLogo = styled.h1<{ isDarkMode: boolean }>`
   transition: 0.3s;
 
   &:hover {
-    background: ${({ theme }) => theme["background-hover"]};
+    background: ${({ theme }) => theme.backgroundHover};
     background-image: ${({ isDarkMode }) =>
       isDarkMode
         ? "url('/images/img_Logo_dark.svg')"
@@ -43,4 +43,15 @@ const StyledModeButton = styled.button`
   transition: 0.3s;
 `;
 
-export { StyledHeader, StyledLogo, StyledModeButton };
+const StyledSignin = styled.div`
+  display: flex;
+  gap: 24px;
+
+  a {
+    font-weight: 500;
+    color: var(---white);
+    transition: 0.3s;
+  }
+`;
+
+export { StyledHeader, StyledLogo, StyledModeButton, StyledSignin };
