@@ -24,10 +24,7 @@ function Visual() {
         <StyledSignin>
           <StyledSigninWrap>
             <StyledImgWrap>
-              <img
-                src="../../public/images/img_Logo_white.svg"
-                alt="DreaMoon"
-              />
+              <img src="public/images/img_Logo_white.svg" alt="DreaMoon" />
             </StyledImgWrap>
 
             <div>
