@@ -1,4 +1,4 @@
-import SigninForm from "../../components/signin/SigninForm";
+import SigninForm from "../../components/SignForm/SigninForm";
 import { StyledInner } from "../../layout/Inner.style";
 
 function Signin() {
