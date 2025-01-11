@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../layout/Header";
-import Home from "../pages/Home/Home";
+import Home from "../pages/home/Home";
+import Signin from "../pages/signin/Signin";
+import MyCalendar from "../pages/mycalendar/MyCalendar";
 import UserList from "../pages/UserList/UserList";
 
 type HeaderProp = {
@@ -17,6 +19,8 @@ function Router({ isDarkMode, toggleTheme }: HeaderProp) {
         <Route path="/">
           <Route index element={<Home />} />
 
+          <Route path="signin" element={<Signin />} />
+          <Route path="myCalendar" element={<MyCalendar />} />
           <Route path="userlist" element={<UserList />} />
         </Route>
       </Routes>

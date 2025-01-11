@@ -43,15 +43,4 @@ const StyledModeButton = styled.button`
   transition: 0.3s;
 `;
 
-const StyledSignin = styled.div`
-  display: flex;
-  gap: 24px;
-
-  a {
-    font-weight: 500;
-    color: var(---white);
-    transition: 0.3s;
-  }
-`;
-
-export { StyledHeader, StyledLogo, StyledModeButton, StyledSignin };
+export { StyledHeader, StyledLogo, StyledModeButton };

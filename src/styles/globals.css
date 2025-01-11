@@ -20,5 +20,7 @@
   --input-focus: #38b2ac;
   --placeholder-color: #9fa6b2;
 
-  --login-button: #9fa6b2;
+  --login-button-disabled: #9fa6b2;
+
+  --error: #d6173a;
 }
