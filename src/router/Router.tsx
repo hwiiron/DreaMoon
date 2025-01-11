@@ -16,13 +16,10 @@ function Router({ isDarkMode, toggleTheme }: HeaderProp) {
       <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
 
       <Routes>
-        <Route path="/">
-          <Route index element={<Home />} />
-
-          <Route path="signin" element={<Signin />} />
-          <Route path="myCalendar" element={<MyCalendar />} />
-          <Route path="userlist" element={<UserList />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="signin" element={<Signin />} />
+        <Route path="myCalendar" element={<MyCalendar />} />
+        <Route path="userlist" element={<UserList />} />
       </Routes>
     </BrowserRouter>
   );
