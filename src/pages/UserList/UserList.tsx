@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import db from "../../firebase/firestore";
 import { collection, getDocs } from "firebase/firestore";
+import { StyledInner } from "../../layout/Inner.style";
 
 type User = {
   id: string;
@@ -11,36 +12,15 @@ type User = {
 function UserList() {
   const [users, setUsers] = useState<User[]>([]);
 
-  // const fetchUsers = async () => {
-  //   const usersCollection = collection(db, "users");
-  //   const usersSnapshot = await getDocs(usersCollection);
-  //   const usersList = usersSnapshot.docs.map((doc) => ({
-  //     id: doc.id,
-  //     nickname: doc.data().nickname,
-  //     age: doc.data().age,
-  //   }));
-  //   setUsers(usersList);
-  // };
-
-  // useEffect(() => {
-  //   fetchUsers();
-  // }, []);
-
   const fetchUsers = async () => {
-    try {
-      console.log("Fetching users...");
-      const usersCollection = collection(db, "users");
-      const usersSnapshot = await getDocs(usersCollection);
-      const usersList = usersSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        nickname: doc.data().nickname,
-        age: doc.data().age,
-      }));
-      console.log("Fetched users:", usersList);
-      setUsers(usersList);
-    } catch (error) {
-      console.error("Error fetching users:", error);
-    }
+    const usersCollection = collection(db, "users");
+    const usersSnapshot = await getDocs(usersCollection);
+    const usersList = usersSnapshot.docs.map((doc) => ({
+      id: doc.id,
+      nickname: doc.data().nickname,
+      age: doc.data().age,
+    }));
+    setUsers(usersList);
   };
 
   useEffect(() => {
@@ -48,7 +28,7 @@ function UserList() {
   }, []);
 
   return (
-    <>
+    <StyledInner>
       <h2>유저 목록</h2>
       {users.map((user) => (
         <div
@@ -60,7 +40,7 @@ function UserList() {
           <p>나이: {user.age}</p>
         </div>
       ))}
-    </>
+    </StyledInner>
   );
 }
 

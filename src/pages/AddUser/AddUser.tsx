@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import db from "../../firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
+import { StyledInner } from "../../layout/Inner.style";
 
 function AddUser() {
   const [newId, setNewId] = useState("");
@@ -25,7 +26,7 @@ function AddUser() {
   };
 
   return (
-    <>
+    <StyledInner>
       <Link to="/userList">유저 목록</Link>
 
       <div>
@@ -50,7 +51,7 @@ function AddUser() {
         />
         <button onClick={handleAddUser}>추가</button>
       </div>
-    </>
+    </StyledInner>
   );
 }
 

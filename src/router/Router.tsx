@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../layout/Header";
-import Home from "../pages/home/Home";
-import Signin from "../pages/signin/Signin";
-import MyCalendar from "../pages/mycalendar/MyCalendar";
+import Home from "../pages/Home/Home";
+import Signin from "../pages/Signin/Signin";
+import MyCalendar from "../pages/MyCalendar/MyCalendar";
 import UserList from "../pages/UserList/UserList";
 
 type HeaderProp = {
