@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import db from "../../firebase/firestore";
+import db from "../firebase/firestore";
 import { collection, getDocs } from "firebase/firestore";
-import { StyledInner } from "../../layout/Inner.style";
+import { StyledInner } from "../layout/Inner.style";
 
 type User = {
   id: string;

@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../layout/Header";
-import Home from "../pages/home/Home";
-import Signin from "../pages/signin/Signin";
-import MyCalendar from "../pages/mycalendar/MyCalendar";
-import UserList from "../pages/userlist/UserList";
+import Home from "../pages/Home";
+import Signin from "../pages/Signin";
+import MyCalendar from "../pages/MyCalendar";
+import UserList from "../pages/UserList";
 
 type HeaderProp = {
   isDarkMode: boolean;

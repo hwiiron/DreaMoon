@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import db from "../../firebase/firestore";
+import db from "../firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
-import { StyledInner } from "../../layout/Inner.style";
+import { StyledInner } from "../layout/Inner.style";
 
 function AddUser() {
   const [newId, setNewId] = useState("");
