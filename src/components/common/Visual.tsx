@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { StyledInner } from "../../layout/Inner.style";
 import { StyledVisual } from "./Visual.style";
 
 function Visual() {
@@ -9,9 +10,11 @@ function Visual() {
   };
 
   return (
-    <StyledVisual>
-      <button onClick={handleSecretClick} />
-    </StyledVisual>
+    <StyledInner>
+      <StyledVisual>
+        <button onClick={handleSecretClick} />
+      </StyledVisual>
+    </StyledInner>
   );
 }
 

@@ -1,12 +1,7 @@
 import SigninForm from "../components/signin/SigninForm";
-import { StyledInner } from "../layout/Inner.style";
 
 function Signin() {
-  return (
-    <StyledInner>
-      <SigninForm />
-    </StyledInner>
-  );
+  return <SigninForm />;
 }
 
 export default Signin;

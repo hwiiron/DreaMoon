@@ -1,13 +1,13 @@
 import { ChangeEvent, useState } from "react";
-import Input from "../common/Input";
-import Button from "../common/Button";
+import { StyledInner } from "../../layout/Inner.style";
 import {
   StyledSignin,
   StyledSigninWrap,
   StyledLogoWrap,
 } from "./SigninForm.style";
+import Input from "../common/Input";
+import Button from "../common/Button";
 import { ERROR_MESSAGE } from "../../constants/messages";
-import { useNavigate } from "react-router-dom";
 
 function SigninForm() {
   const [values, setValues] = useState({
@@ -16,8 +16,6 @@ function SigninForm() {
   });
   const [emailValidation, setEmailValidation] = useState(false);
   const [passwordValidation, setPasswordValidation] = useState(false);
-
-  const navigate = useNavigate();
 
   const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const emailPattern = !pattern.test(values.email.trim());
@@ -42,58 +40,59 @@ function SigninForm() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    navigate("/myCalendar");
   };
 
   return (
-    <StyledSignin>
-      <StyledSigninWrap>
-        <StyledLogoWrap to="/">
-          <img src="/images/img_Logo_white.svg" alt="DreaMoon" />
-        </StyledLogoWrap>
+    <StyledInner>
+      <StyledSignin>
+        <StyledSigninWrap>
+          <StyledLogoWrap to="/">
+            <img src="/images/img_Logo_white.svg" alt="DreaMoon" />
+          </StyledLogoWrap>
 
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="email">이메일</label>
-            <Input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="이메일을 입력해 주세요."
-              value={values.email}
-              handleChange={handleChange}
-              handleBlur={handleBlur}
-              error={emailValidation}
-              errorMessage={ERROR_MESSAGE.EMAIL_INVALID_FORMAT}
-            />
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="email">이메일</label>
+              <Input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="이메일을 입력해 주세요."
+                value={values.email}
+                handleChange={handleChange}
+                handleBlur={handleBlur}
+                error={emailValidation}
+                errorMessage={ERROR_MESSAGE.EMAIL_INVALID_FORMAT}
+              />
+            </div>
 
-          <div>
-            <label htmlFor="password">비밀번호</label>
-            <Input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="비밀번호를 입력해 주세요."
-              value={values.password}
-              handleChange={handleChange}
-              handleBlur={handleBlur}
-              error={passwordValidation}
-              errorMessage={ERROR_MESSAGE.PASSWORD_MIN_LENGTH}
-            />
-          </div>
+            <div>
+              <label htmlFor="password">비밀번호</label>
+              <Input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="비밀번호를 입력해 주세요."
+                value={values.password}
+                handleChange={handleChange}
+                handleBlur={handleBlur}
+                error={passwordValidation}
+                errorMessage={ERROR_MESSAGE.PASSWORD_MIN_LENGTH}
+              />
+            </div>
 
-          <Button
-            disabled={emailPattern || passwordPattern}
-            onClick={() => console.log("로그인 버튼 클릭!")}
-          >
-            로그인
-          </Button>
-        </form>
-      </StyledSigninWrap>
-    </StyledSignin>
+            <Button
+              disabled={emailPattern || passwordPattern}
+              onClick={() => console.log("로그인 버튼 클릭!")}
+            >
+              로그인
+            </Button>
+          </form>
+        </StyledSigninWrap>
+      </StyledSignin>
+    </StyledInner>
   );
 }
 
